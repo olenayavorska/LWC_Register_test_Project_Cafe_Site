@@ -1,0 +1,148 @@
+.login-button {
+    
+    background-color: rgba(11,88,144,255);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 0.5rem;
+    font-size: 16px;
+    font-family: Helvetica;
+}
+.login-button:hover {
+ background-color: rgba(6,58,97,255);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 0.5rem;
+    font-size: 16px;
+    font-family: Helvetica;
+}
+
+
+
+.input-icon {
+
+    position: absolute;
+    margin: 0.9rem 0.7rem;
+    --lwc-colorTextIconDefault: black;
+}
+
+
+
+.input-element {
+    color: black;
+    padding: 0.5rem 0rem 0.5rem 2rem;
+    font-size: 14px;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+
+.register-text {
+
+    color: #CCBFBF;
+    font-size: 14px;
+    float: right;
+}
+
+.error {
+
+    text-align: center;
+    word-break: break-word;
+    max-width: 20rem;
+    color: #ff9e9e;
+}
+
+
+.slds-grid_vertical .slds-col {
+
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+}
+
+.tooltip {
+    position: relative;   
+  }
+  
+  .tooltip .tooltiptext {
+    
+    color: rgba(217,150,149,253);
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 3px;
+    position: absolute;
+    z-index: 1;    
+    margin-left: 0.5rem;
+    bottom: 0;
+    left: 100%;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: -4px;
+    margin-left: -6px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+    transform: rotate(90deg);
+  }
+  
+  .tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+  }
+
+
+  .tooltipEmail:hover ~ .usernameColumn .tooltip .tooltiptext {
+
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .tooltipError {
+
+    background-color: red !important;
+    border: 1px solid white;
+  }
+
+  .tooltip .tooltipError::after {
+
+    border-color: white transparent transparent transparent !important;
+  }
+
+  .tooltipShow {
+
+    display: block;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  .tooltipHide {
+
+    display: none;
+  }
+  .errorText{
+    color: rgba(217,150,149,253);
+    text-align: center;
+  }
+  .errorTextHide {
+
+    display: none;
+  }
+  .errorTextShow {
+
+    display: block;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+
+

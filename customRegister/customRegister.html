@@ -1,0 +1,59 @@
+<template>
+    <div class="main-container slds-grid slds-grid_vertical slds-gutters">
+        <!--error messages section-->
+        <div class="errorText">
+            <span class={requiredTooltipDisplayData.firstName}>First Name is required.</span>
+            <span class={requiredTooltipDisplayData.lastName}>Last Name is required.</span>
+            <span class={requiredTooltipDisplayData.email}>Email is required.</span>
+            <span class={errorTooltipDisplayData.email}>{emailError}</span>
+            <span class={requiredTooltipDisplayData.partnerNumber}>Partner Number is required.</span>
+            <span class={errorTooltipDisplayData.partnerNumber}>{partnerNumberError}</span>
+            <span class={errorTooltipDisplayData.errorMessage}>{errorMessage}</span>
+        </div>
+       
+        <!--error messages section-->
+        <div class="slds-col">
+
+            <div class="slds-form-element">
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left ">
+                    <lightning-icon class="input-icon" icon-name="utility:user" alternative-text="username" size="xx-small"></lightning-icon>
+                    <input type="text" data-id="inputFirstName" placeholder="First Name" class="slds-input input-element" value={firstName} onchange={handleFirstNameChange} required />
+                </div>
+            </div>
+
+        </div>
+        <div class="slds-col">
+
+            <div class="slds-form-element">
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left ">
+                    <lightning-icon class="input-icon" icon-name="utility:user" alternative-text="userlastname" size="xx-small"></lightning-icon>
+                    <input type="text" data-id="inputLastName" placeholder="Last Name" class="slds-input input-element" value={lastName} onchange={handleLastNameChange} required />  
+                </div>
+            </div>
+
+        </div>
+        <div class="slds-col tooltipEmail">
+
+            <div class="slds-form-element">
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left " onmouseover={handleEmailHover}>
+                    <lightning-icon class="input-icon" icon-name="utility:email" alternative-text="username" size="xx-small"></lightning-icon>
+                    <input type="text" data-id="inputEmail" placeholder="Email" class="slds-input input-element" value={email} onkeyup={handleEmailChange} pattern="^[^@\s]+@[^@\s]+\.[^@\s]+$" oninvalid={onEmailInvalid} oninput={onEmailInput} onclick={onEmailClick} onblur={onEmailBlur} required/>
+                </div>
+            </div>
+
+        </div>
+        <div class="slds-col">
+
+            <div class="slds-form-element">
+                <div class="slds-form-element__control slds-input-has-icon slds-input-has-icon_left ">
+                    <lightning-icon class="input-icon" icon-name="utility:company" alternative-text="partnernumber" size="xx-small"></lightning-icon>
+                    <input type="text" data-id="inputPartnerNumber" placeholder="Partner Number" class=" slds-input input-element" value={partnerNumber} onchange={handlePartnerNumberChange} required />
+                </div>
+            </div>
+
+        </div>
+        <div class="slds-col">
+            <button type="submit" class="login-button slds-button" onclick={handleRegister}><b>Sign Up</b></button>
+        </div>
+    </div>
+</template>
